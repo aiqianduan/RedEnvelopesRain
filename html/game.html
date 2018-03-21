@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+    <script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+    <title>红包-抢红包</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/redenvelop.css">
+
+		
+		
+
+</head>
+<body>
+
+    <div id="divReady" class="redEnvelop readyGo">
+        <p class="ready-title">
+            <span>猛戳屏幕抢红包</span><img src="../img/ready-point.gif">
+        </p>
+        <p class="ready-timeDown"></p>
+
+    </div>
+
+
+    <!-- 红包 -->
+    <div id="divGame" class="redEnvelop game" style="display:none;">
+        <ul class="couten"></ul>
+        <div class="count-down">
+            <span class="time">10</span><span>s</span>
+        </div>
+    </div>
+
+
+    <!-- 中奖 -->
+    <div class="winMessage"  style="display:none;">
+        <!-- 有中奖 -->
+        <div class="Winning" >
+            <!-- 现金 cash -->
+            <!-- 米粒  mili -->
+            <div class="rewardBox mili">
+                <!-- <p class="Amount"><span>10</span>元</p> -->
+                <p class="Amount"><span>10</span><span>米粒</span></p>
+                <div class="tips tips_1" style="display:none">
+                    <p>恭喜您获得</p>
+                    <p>已存入账户余额</p>
+                </div>
+                <div class="tips tips_2" style="display:none">
+                    <p>恭喜您获得</p>
+                    <p>已存入微信账户钱包</p>
+                </div>
+
+                <div class="share">
+                    <p>分享给好友</p>
+                    <p>即可获得额外游戏次数哟</p>
+                </div>
+
+                <div class="status">
+                    <!-- 在玩一次 -->
+                    <div class="again" style="display:none;">
+                        <a href="javascript:;">再玩一次</a>
+                        <a href="javascript:;">去分享</a>
+                    </div>
+                    <!-- 次数已用完 -->
+                    <div class="has-over"  >
+                        <a href="javascript:;">次数用完了快去分享吧</a>
+                       <span>每天仅前3次分享有效</span>
+                    </div>
+                </div>
+               
+
+            </div>
+            <a class="toMine" href="#">查看我的红包 > </a>
+        </div>
+
+        <!-- 未中奖 -->
+        <div class="no-Winning"  style="display:none;">
+                <div class="rewardBox">
+                   <img src="../img/no-get.png" alt="">
+                   <div class="tips">
+                        <p>很遗憾，未中奖</p>
+                        <p>据说，多看小说更容易中奖哦</p>
+                    </div>
+                    <div class="share">
+                        <p>分享给好友</p>
+                        <p>即可获得额外游戏次数哟</p>
+                    </div>
+    
+                    <div class="status">
+                        <!-- 在玩一次 -->
+                        <div class="again" style="display:none;">
+                            <a href="javascript:;">再玩一次</a>
+                            <a href="javascript:;">去分享</a>
+                        </div>
+                        <!-- 次数已用完 -->
+                        <div class="has-over"  >
+                            <a href="javascript:;">次数用完了快去分享吧</a>
+                           <span>每天仅前3次分享有效</span>
+                        </div>
+                    </div>
+                   
+    
+                </div>
+
+                <a class="toMine" href="#">查看我的红包 > </a>
+                
+            </div>
+    </div>
+
+
+</body>
+<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../../js/jquery.min.js"></script>
+
+<script src="../js/redenvelop.js"></script>
+<script>
+    StartGame();
+    var timedown;
+    function StartGame() {
+        var _timedown = new Timedown({
+            selector: ".ready-timeDown",
+            time: 5,
+            onStart: function () { },
+            onEnd: function () {
+                $('.ready-timeDown').html('GO');
+                $("#divReady").hide();
+                $("#divGame").show();
+                timedown = new Timedown({
+                    selector: ".game .time",
+                    time: 10,
+                    onStart: function () { gameing.init({ click: Prizedraw }); },
+                    onEnd: function () { gameing.over(); NotWinningResult(); }
+                });
+            }
+        });
+    }
+
+    var flag = false;
+    function Prizedraw() {
+        if (!flag) {
+            flag = true;
+            $.ajax({
+                url: '/RedPack/Prizedraw',
+                data: null,
+                type: "post",
+                dataType: 'json',
+                success: function (res) {
+                    if (res && res.Success && res.Data && res.Data.RedPackPrizeSetView) {
+                        WinningResult(res.Data.RedPackPrizeSetView);
+                    } else {
+                        flag = false;
+                    }
+                },
+                error: function () {
+                    flag = false;
+                }
+            });
+        }
+    }
+
+    function NotWinningResult(data) {
+        $('.game').hide();
+        $('.winMessage').show()
+        $('.Winning').hide()
+        $('.no-Winning').show()
+    }
+    function WinningResult(data) {
+        if (data) {
+            timedown.toEnd();
+            $('.game').hide();
+            $('.winMessage').show()
+            $('.Winning').show()
+            $('.no-Winning').hide()
+            SetRedPackInfo(data.Fee, data.PrizeType);
+        }
+    }
+
+    function SetRedPackInfo(amount, type) {
+        var unit = {
+            1: '米粒',
+            2: '元'
+        };
+        amount = type == 2 ? (amount / 100) : amount;
+        $(".Winning .Amount span").eq(0).html(amount);
+        $(".Winning .Amount span").eq(1).html(unit[type]);
+        $(".Winning .tips_" + type).show();
+    }
+</script>
+
+</html>

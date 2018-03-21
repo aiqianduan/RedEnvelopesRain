@@ -1,0 +1,668 @@
+
+.redEnvelop{
+	width:100%;
+	height: auto;
+	min-height: 100%;
+}
+
+/*准备进入游戏*/
+.readyGo{
+	background: url('../img/ready-bg.png') no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+.readyGo .ready-title{
+	padding-top:4.5rem;
+}
+
+.readyGo .ready-title span{
+	font-size:0.56rem;
+	color:#fff;  
+	font-weight: 600;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+.readyGo .ready-title img{
+	width:0.44rem;
+	height: 0.56rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin:0 0.16rem ;
+
+}
+
+
+.readyGo .ready-timeDown{
+	font-size:4.69rem;
+	margin-top:0.8rem;
+	color:#fdde46;
+	text-shadow: 0px 0px 30px #481c01;
+}
+
+
+
+
+/*index 页*/
+.indexWrap{
+	width:100%;
+	height:auto; 
+	min-height: 100%;
+	background: url('../img/index-bg.png') no-repeat;
+	background-size: 100% 100%;
+	padding: 0.31rem 0 .78rem;
+}
+
+.scrollTips{ 
+	width: 100%; 
+	padding: 0 0.31rem;
+}
+.scrollTips img{
+	width: 0.38rem;
+	height:0.38rem;
+	vertical-align: middle;
+	float: left;
+	position: relative;
+	margin:.05rem .31rem 0 0;
+	
+}
+
+.scrollContent {
+	overflow:hidden;
+	width: auto;
+	max-width:100%;
+	font-size: 12px;
+	height: .47rem;
+	line-height:0.47rem;
+	padding:0 .16rem;
+}
+
+.scrollContentTranslate{
+	float: left;
+	width: auto;
+	min-width:8000%;
+}
+.scroll1, .scroll2, .scroll1 li, .scroll2 li{
+	float: left;
+}
+.scroll1 li, .scroll2 li{
+	margin:0 .31rem;
+	font-size: .41rem;
+	color:#333 ;
+}
+/* 活动图片 */
+.index-middle{
+	text-align: center;
+}
+
+.index-middle img{
+	/*width:8.59rem;*/
+	height:10.2rem;
+	margin: .47rem 0;
+}
+
+.index-middle p{
+	font-size:.47rem;
+	color:#5C2905 ;
+}
+
+.index-middle p span{
+	font-size:0.75rem;
+	color:#E70404 ;
+	display: inline-block;
+	width:.85rem;
+	height: .85rem;
+	text-align: center;
+	line-height: .85rem;
+	background-color: #FFF4C1 ;
+	margin:-.08rem .16rem 0;
+	vertical-align:top;
+}
+
+/* 开始按钮 */
+.Opportunity{
+	padding: 0 0 .47rem;
+}
+
+.Opportunity  .gobtn{
+	width:8.59rem;
+	height: 1.56rem;
+	display: block;
+	margin:0 auto;
+}
+
+.Opportunity  .gobtn img{
+	width:100%;
+	height:100%;
+}
+
+.has-opp{
+	/* padding-top: .47rem; */
+	margin-bottom:.63rem
+}
+
+.no-opp{
+	padding-top: .16rem;
+}
+.Opportunity  .no-opp span{
+	font-size:.39rem;
+	color:#e6af0d ;
+	display:block;
+	text-align: center;
+	
+}
+
+
+
+
+
+
+
+
+/* 活动规则 */
+.activeRules{
+	position: relative;
+	text-align: center;
+	padding: 0 .31rem;
+}
+
+.activeRules .main-title{
+	font-size: .56rem;
+	color:#333 ;
+	position: relative;
+	width:2.5rem;
+	height: .63rem;
+	line-height: .63rem;
+	text-align: center;
+	background-color:#FCE4CA ;
+	margin: auto;
+	z-index: 1;
+}
+
+
+.activeRules ul{
+	border:1px solid #5C2905 ;
+	min-height: 1.56rem;
+	text-align: left;
+	padding: .31rem .63rem;
+	margin-top:-.31rem;
+}
+.activeRules ul li{
+	margin: .31rem 0;
+}
+.activeRules ul li p{
+	font-size: .38rem;
+	line-height: 1.5;
+}
+.activeRules ul li .title{
+	font-size: .47rem;
+	line-height: 2.0;
+}
+
+/* 分享引导 */
+.guidePopUp{
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: right;
+	z-index: 2;
+}
+.guidePopUp .guide-mask{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: #000;
+	opacity: 0.7;
+}
+
+.guidePopUp .arrow{
+	width:1.41rem;
+	height: 1.56rem;
+	top:.31rem;
+	right: .31rem;
+	position:absolute;
+	z-index: 8;
+}
+.guidePopUp .guide-content{
+	position: absolute;
+	z-index: 8;
+	z-index: 10;
+	width:100%;
+	height: auto;
+	margin-top:2.5rem;
+	text-align: center;
+}
+
+
+.guidePopUp .guide-content img{
+	width:4.53rem;
+}
+
+.guidePopUp .guide-content p{
+	color:#FDCD3D ;
+	font-size: .5rem ;
+	font-weight: 600;
+	margin: .31rem 0;
+}
+
+
+
+
+
+
+
+
+
+/* 我的红包 */
+.Mine{
+	padding: .78rem .47rem;
+}
+
+.Mine ul li{
+	width:100%;
+	min-height: 2.66rem;
+	overflow: hidden;
+	border:1px solid #E1E1E1 ;
+	border-radius: .08rem;
+	margin-bottom: .23rem;
+	padding:.39rem .31rem ;
+}
+.Mine ul li .Prize{
+	width:1.85rem;
+	height:2.5rem;
+	background: url(../img/redboxbg.png) no-repeat;
+	background-size: 100% 100%;
+	float: left;
+	position: relative;
+	margin-right: .31rem;
+	font-size: .25rem;
+	color:#F83438 ;
+	text-align: center;
+	word-wrap: break-word;
+	padding:1.1rem .13rem 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.Mine ul li .Prize span{
+	font-size: .5rem;
+}
+.Mine ul li div p{
+	font-size:.38rem;
+	color:#333 ;
+	line-height:1.5;
+}
+.Mine ul li div .title{
+	font-size: .5rem;
+	color:#333 ;
+	line-height:2.5;
+}
+.Mine ul li div .clickLook{
+	color:#ff5c4d ;
+	margin-left:.16rem;
+}
+
+
+
+
+
+.no-get{
+	text-align: center;
+}
+.no-get .no-get-icon{
+	width:4.69rem;
+	height: 4.69rem;
+	background-color:#e7e7e7;
+	border-radius: 50%;
+	padding-top: 1.0rem;
+	margin:3.13rem auto .63rem;
+}
+
+.no-get .no-get-icon img{
+	width:1.56rem;
+	height: 1.72rem;
+}
+.no-get .no-get-icon p{
+	color:#999;
+	font-size: .5rem;
+
+}
+.no-get .no-get-word{
+	font-size: .41rem;
+	color: #E54024
+}
+
+
+
+/* 抢红包 */
+.game{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow-y: hidden;
+	background:url('../img/gamebg.png') no-repeat;
+	background-size:  100% 100%;
+}
+.game .couten {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: hidden;
+}
+.game  .couten li {
+	width:1.13rem;
+	height: 1.84rem;
+	position: absolute;
+	animation: all 3s linear;
+	top:-1.56rem;
+	-webkit-tap-highlight-color:  rgba(0, 0, 0, 0);
+}
+.game .couten li img{
+	width:100%;
+	height: 100%;
+}
+
+.game .count-down{
+	text-align: center;
+	width:1.56rem;
+	height: 1.56rem;
+	line-height: 1.56rem;
+	background: url('../img/count-down.png') no-repeat;
+	background-size:100% 100%;
+	font-size: .63rem;
+	color:#F83438 ;
+	text-align: center;
+	position: absolute;
+	top:.31rem;
+	right:.47rem;
+	z-index: 10;
+}
+
+.game .count-down .time{
+	margin-right: .08rem;
+}
+
+/* 中将页面 */
+
+/* 中奖-现金 */
+.winMessage{
+	width:100%;
+	height: 100%;
+}
+.Winning{
+	text-align: center;
+	width:100%;
+	height:auto;
+	min-height: 100%;
+	background: url('../img/getbg.png') no-repeat;
+	background-size:100% 100%;
+	padding-top: 1.56rem;
+}
+.Winning .rewardBox{
+	width:8.75rem;
+	min-height: 12.97rem;
+	margin:0 auto 0.5rem;
+}
+.Winning .cash{
+	background: url('../img/dollor.png') no-repeat;
+	background-size:100% 100%;
+	padding-top:2.0rem;
+}
+
+.Winning .mili{
+	background: url('../img/mili.png') no-repeat;
+	background-size:100% 100%;
+	padding-top:1.25rem;
+}
+
+
+.Winning .mili .tips{
+	margin-top:2.19rem;
+	color:#fff ;
+}
+.Winning .cash .tips{
+	margin-top:1.88rem;
+	color:#fff ;
+}
+
+
+.rewardBox .share{
+	margin-top:.94rem;
+	color:#f5c08f ;
+	font-size:.39rem;
+}
+.Winning .rewardBox .Amount{
+	font-size:.39rem ; 
+	color: #dd000a ;
+}
+.Winning .rewardBox .Amount span{
+	font-size:1.66rem;
+	color: #dd000a ;
+}
+
+
+.Winning .rewardBox .tips p:first-child{
+	font-size:.63rem;
+	color:#faeec0 ;
+}
+
+.Winning .rewardBox .tips p:last-child{
+	font-size:.39rem;
+	color:#ffe8bf ;
+	margin-top:.23rem;
+}
+
+
+
+
+.rewardBox .status{
+	width:6.56rem;
+	margin:.47rem auto 0;
+}
+
+.rewardBox .status .again{
+	width:100%;
+	height: 1.5rem;
+	border-radius: .16rem;
+	
+}
+
+.Winning .rewardBox .status .again{
+	background: url('../img/share.png') no-repeat;
+	background-size: 100% 100%;
+}
+.no-Winning .rewardBox .status .again{
+	background: url('../img/no-btn.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+
+
+.rewardBox .status .again a{
+	display:inline-block;
+	width:49%;
+	height: 100%;
+	line-height: 1.5rem;
+	text-align: center;
+	font-size:.47rem;
+
+} 
+.Winning .rewardBox .status .again a:first-child{
+	color:#fecf4b ;
+}
+.Winning .rewardBox .status .again a:last-child{
+	color:#e5331a ; 
+}
+.no-Winning .rewardBox .status .again a:first-child{
+	color:#e5331a ;
+}
+.no-Winning .rewardBox .status .again a:last-child{
+	color:#fff ; 
+}
+
+.rewardBox .status .has-over a{
+	width:6.56rem;
+	height: 1.5rem;
+	border-radius: .16rem;
+	
+}
+
+
+
+
+.rewardBox .status .has-over a{
+	display:inline-block;
+	width:100%;
+	height: 100%;
+	text-align: center;
+	line-height: 1.5rem;
+	font-size: .5rem;
+	
+}
+.Winning  .status .has-over a{
+	background-color: #FECF4B ;
+	color: #DD000A ; 
+}
+.no-Winning  .status .has-over a{
+	background-color: #DD000A ;
+	color :#fff ;
+}
+.rewardBox .status .has-over span{
+	display:block;
+	font-size: .38rem;
+	margin-top:.16rem;
+}
+.Winning .status .has-over span{
+	color:#fecf4b ;
+ }
+
+ .no-Winning .status .has-over span{
+	color:#666;
+ }
+
+
+
+
+
+/* 未中奖 */
+.no-Winning{
+	text-align: center;
+	width:100%;
+	height:auto;
+	min-height: 100%;
+	background: url('../img/getbg.png') no-repeat;
+	background-size:100% 100%;
+	padding-top: 1.56rem;
+}
+.no-Winning  .rewardBox{
+	margin:0 auto 0;
+}
+.no-Winning  .rewardBox img{
+	width:100%;
+}
+.no-Winning  .tips{
+	margin-top:1.17rem;
+	color:#333;
+}
+
+.no-Winning  .tips p:first-child{
+	font-size: .56rem;
+	color:#333
+} 
+.no-Winning  .tips p:last-child{
+	font-size: .47rem;
+	color:#666;
+	margin-top:0.23rem;
+}
+.no-Winning .share{
+	margin-top:1.75rem;
+	color:#4c4c4c ;
+}
+.no-Winning .share p:last-child{
+	color:#4c4c4c ;
+}
+
+
+
+.toMine{
+	display: block;
+	color: #e70404 ; 
+	font-size:.39rem;
+	text-align: center;
+	margin:.23rem 0;
+}
+
+
+
+
+
+/* 微信登录 */
+.weiLogin{
+	text-align: center;
+	padding-top:4.69rem;
+	background-color: #fff; 
+	position: relative;
+}
+.weiLogin p:first-child{
+	color:#8c8c8c ; 
+	font-size:.47rem;
+} 
+
+.weiLogin .weiLoginBtn{
+	width:100%;
+	position: absolute;
+	bottom: 3.13rem;
+}
+
+.weiLogin .weiLoginBtn a{
+	display: block;
+	font-size:0.44rem;
+	color:#272727 ;
+	
+  }
+.weiLogin a img{
+	width:1.88rem;
+	height: 1.88rem;
+} 
+
+
+/* 关注 */
+.Attention{
+background-color: #fff ;
+text-align: center;
+padding-top: 3.6rem ;
+}
+
+.Attention img{
+	width:6.25rem;	
+	margin-bottom: .47rem ;
+}
+.Attention p{
+	font-size:.44rem;
+	color:#ff5c4d;
+	line-height: 2.5;
+}	
+
+
+/*出错*/
+.notWebChat{
+	width:100%;
+	height: 100%;
+	text-align: center;
+	background-color:#fff;
+	padding-top: 3.91rem ;
+	font-size: 0.47rem;
+}
+
+.notWebChat img{
+	margin-bottom: 0.47rem
+}
+
+
+

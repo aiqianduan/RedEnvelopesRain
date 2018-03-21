@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+	<script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+	<title>红包-准备</title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/redenvelop.css">
+	
+	
+	
+</head>
+<body>
+	
+	<div class="redEnvelop indexWrap">
+		<div class="scrollTips">
+			<img src="../img/laba.png">
+			<div class="scrollContent" >
+				<div class="scrollContentTranslate" >
+					<ul class="scroll1" >
+					  <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					   <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 <li>1追* 获得100米粒;</li>
+					  <li>2为***来 获得500米粒;</li>
+					  <li>3dhs***1 获得200米粒</li>
+					  <li>4追* 获得100米粒;</li>
+					 
+					 
+				    </ul>
+				    <ul class="scroll2"></ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		<!-- 图片 -->
+		<div class="index-middle">
+			<img src="../img/index-red.png" alt="">
+			<p>剩余<span>3</span>次抢红包机会！</p>
+		</div>
+
+		<!-- 按钮  开始游戏 -->
+		<div class="Opportunity">
+			<!-- 有机会 -->
+			<!--<div class="has-opp" >
+				<a class="gobtn" href="./game.html">
+					<img src="../img/gama-btn.png" alt="">
+				</a>
+			</div>-->
+			<!-- 无机会  去分享 -->
+			<div class="no-opp" >
+				<a class="gobtn" href="javascript:;">
+					<img src="../img/gama-btn.png" alt="">
+				</a>
+				<span>每天仅前3次分享有效</span>
+			</div>
+
+
+			<a class="toMine" href="#">查看我的红包 ></a>
+		</div>
+		
+
+		<!-- 活动规则 -->
+		<div class="activeRules">
+			<p class="main-title">活动规则</p>
+			<ul>
+				<li>
+					<p class="title">活动时间</p>
+					<p>2018年2月14日 00:00:00 - 2月20日 23:59:59</p>
+				</li>
+				<li>
+					<p class="title">抢红包规则</p>
+					<p>活动期间，每位用户每天可以抢3次红包；<br>分享给好友再增加1次机会，每天仅前3次分享有效；<br>抢到的奖品实时发放，可在“我的红包”中查看获奖 记录</p>
+				</li>
+				<li>
+					<p class="title">红包福利</p>
+					<p>奖品包含现金红包、虚拟币等，具体金额以实际抢到 的红包内容为准<br>如有问题可加微信公众号咨询：abc1234</p>
+				</li>
+			</ul>
+		</div>
+
+		
+	</div>
+
+	<!-- 分享引导 -->
+	<div class="guidePopUp" style="display:none;">
+		<div class="guide-mask"></div>
+		<img class="arrow" src="../img/guide.png" alt="">
+		<div class="guide-content">
+			<img src="../img/index-guide.png" alt="">
+			<p>分享给好友即可增加1次机会哦</p>
+		</div>
+		
+	</div>
+
+</body>
+
+<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../../js/jquery.min.js"></script>
+
+<script src="../js/redenvelop.js"></script>
+<script>
+indexScroll.init()
+
+$('.no-opp .gobtn').click(function(){
+	$('.guidePopUp').show()
+})
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+	<script src="../../plugIn/libflexible/flexible_css.debug.js"></script>
+	<title>红包-准备</title>
+	
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/redenvelop.css">
+	
+	
+	
+</head>
+<body>
+	
+	<div class="redEnvelop readyGo">
+		<p class="ready-title">
+			<span>猛戳屏幕抢红包</span><img src="../img/ready-point.gif">
+		</p>
+		<p class="ready-timeDown"></p>
+		
+	</div>
+
+
+
+	
+
+</body>
+
+<script src="../../plugIn/libflexible/flexible.debug.js"></script>
+<script src="../../plugIn/libflexible/makegrid.debug.js"></script>
+<script src="../../js/jquery.min.js"></script>
+
+<script src="../js/redenvelop.js"></script>
+<script>
+
+data_time.timedown('.ready-timeDown',5,goGame)
+
+function goGame(){
+	$('.ready-timeDown').html('GO');
+	window.location.href='./game.html'
+}
+
+
+</script>
+</html>
